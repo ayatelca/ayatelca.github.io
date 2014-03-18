@@ -6,7 +6,6 @@
 	<meta content='Televisora Ayacucho' name='description'/>
 	<meta content='Ayacucho TV Television Ayatelca Ayatel' name='keywords'/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar-0.4.8.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<title>Ayatecucho Televisión</title>
 </head>
@@ -14,8 +13,6 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/ayatel.js"></script>
-	<script type="text/javascript" src="js/perfect-scrollbar-0.4.8.min.js"></script>
-	<script type="text/javascript" src="js/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
 	
 	<!-- /Body -->
 	<section>
@@ -24,7 +21,7 @@
 				<div class="row">
 					<div class="col-md-9"><img src="images/logo.png" ></div>
 					<div class="col-md-3">
-						<ul class="nav barra-inicio  nav-stacked" style="margin-top:1.2em;">
+						<ul class="nav barra-inicio  nav-stacked" >
 							<li ><a  class="menu primero"   href="#" ><i class="glyphicon glyphicon-wrench" ></i>Reporte de Avería</a></li>
 							<li ><a class="menu" href="#" ><i class="glyphicon glyphicon-user" ></i>Consulte su Cuenta</a></li>
 						</ul>
@@ -96,79 +93,87 @@
 
 					<!-- /Articulos -->
 					<div class="row shadow2">
-						<div class="col-md-12 shadow" style="height: 1.5em; margin-bottom:1.2em;" >
+						<div class="col-md-12 shadow" style="height: 1.6em; margin-bottom:1.2em;" >
 
 						</div>
-							<div class="col-md-4">
-								<article class="panel panel-center">
-									<header class="panel-heading">FOX </header>
-									<div class="panel-body">
-										<div class="thumbnail">
-											<img src="images/portada/article1.png" >
-										</div>
-
-									</div>
-								</article>
-							</div>
-							<div class="col-md-4">
-								<article class="panel panel-center">
-									<header class="panel-heading">ESPN PLAY</header>
-									<div class="panel-body">
-										<div class="thumbnail">
-											<img src="images/portada/article2.jpg" >
-										</div>
-
-									</div>
-								</article>
-							</div>
-							<div class="col-md-4">
-								<article class="panel">
-									<header class="panel-heading">DISCOVERY</header>
-									<div class="panel-body">
-										<div class="thumbnail">
-											<img src="images/portada/article3.jpg" >
-										</div>
-
-									</div>
-								</article>
-							</div>
-					</div>
-					<div class="row">
 						<div class="col-md-4">
 							<article class="panel panel-center">
-								<header class="panel-heading">Articulos</header>
+								<header class="panel-heading">FOX </header>
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="images/portada/article1.png" >
+									</div>
+
+								</div>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="panel panel-center">
+								<header class="panel-heading">ESPN PLAY</header>
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="images/portada/article2.jpg" >
+									</div>
+
+								</div>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="panel">
+								<header class="panel-heading">DISCOVERY</header>
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="images/portada/article3.jpg" >
+									</div>
+
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 shadow3" style="height: 3em; " >
+							<h2 style="color:white;	font-family: nuevaFuente;margin-top:0.2em ">
+								Noticias Locales.
+							</h2>
+						</div>
+					</div>
+					<div class="row">				
+						<div class="col-md-4">
+							<article class="panel panel-center principales">
+								<!-- <header class="panel-heading">Articulos</header> -->
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article4.jpg" >
 									</div>
 									<p>
-										nemo magnam accusamus dicta quis. Nesciunt, ex!
+									Enfrentamientos por barricadas y un taxi quemado en San Cristóbal
+
 									</p>
 								</div>
 							</article>
 						</div>
 						<div class="col-md-4">
-							<article class="panel panel-center">
-								<header class="panel-heading">Articulos</header>
+							<article class="panel panel-center principales">
+								<!-- <header class="panel-heading">Articulos</header> -->
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article5.jpg" >
 									</div>
-									<p>
-										, expedita recusandae natus maiores accusantium placeat ratione voluptatem id sapiente nemo!
+											<p>
+									Retienen 30.6 Toneladas de Cemento en el táchira por guardias nacionales
 									</p>
 								</div>
 							</article>
 						</div>
 						<div class="col-md-4">
-							<article class="panel panel-center">
-								<header class="panel-heading">Articulos</header>
+							<article class="panel panel-center principales">
+								<!-- <header class="panel-heading">Articulos</header> -->
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article6.jpg" >
 									</div>
 									<p>
-										perferendis velit expedita voluptatibus placeat modi architecto iste natus?
+									Algunas aerolineas se retiraran de venezuela, debido a la falta de liquidez.
 									</p>
 								</div>
 							</article>
@@ -179,19 +184,21 @@
 					<!-- Streaming BOx -->
 					<div class="row">
 						<article class="panel panel-center">
-							<header class="panel-heading">Ayacucho Televisión</header>
+							<header class="panel-heading">
+								<h3>Ayacucho Televisión
+								</h3>
+							</header>
 							<div class="panel-body">
 								<div class="thumbnail">
 									<img src="images/atv.png">
 								</div>
 								<p>
-									tium similique ab natus praesentium itaque quia eum quos pariatur magnam.
+										Transmitiendo en vivo nuestra programación
 								</p>
 								<div style="text-align:center;">
-									<button class="btn btn-primary"  ><i class="glyphicon glyphicon-play-circle" ></i>Streaming</button>			
+								<span style="text-align:center;"><?php echo  date("d/m/y ");	?></span>
+<button class="btn btn-danger pull-right" >EN VIVO<i class="glyphicon glyphicon-play-circle" ></i></button>			
 								</div>
-
-
 							</div>
 						</article>	
 					</div>
@@ -200,67 +207,67 @@
 							<li class="list-group-item">
 								<img src="images/canales/02.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">02 <br/>VENE</a></h4>
+									<h4><a data-canal="02" data-nombre="Venevision" onclick="descChannel(this);">02 <br/>VENE</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/03.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">03 <br/>TEVEZ</a></h4>
+									<h4><a data-canal="03" data-nombre="TEVEZ" onclick="descChannel(this);">03 <br/>TEVEZ</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/04.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">04 <br/>TELV</a></h4>
+									<h4><a data-canal="04" data-nombre="TELEVEN" onclick="descChannel(this);">04 <br/>TELV</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/05.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">05 <br/>VENZ</a></h4>
+									<h4><a data-canal="05" data-nombre="VENEZOLANA" onclick="descChannel(this);">05 <br/>VENE</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/06.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">06 <br/>GLOB</a></h4>
+									<h4><a data-canal="06" data-nombre="GLOBOVISION" onclick="descChannel(this);">06 <br/>GLOB</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/07.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">07<br/>MERI</a></h4>
+									<h4><a data-canal="07" data-nombre="MERIDIANO%20TELEVISION" onclick="descChannel(this);">07 <br/>MERID</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/08.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">08 <br/>TELE</a></h4>
+									<h4><a data-canal="08" data-nombre="LA%20TELE" onclick="descChannel(this);">08 <br/>LATEL</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/09.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">10 <br/>FOX</a></h4>
+									<h4><a data-canal="09" data-nombre="FOX" onclick="descChannel(this);">09<br/>FOX</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/10.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#"> 11<br/>FX</a></h4>
+									<h4><a data-canal="10" data-nombre="FX" onclick="descChannel(this);"> 10<br/>FX</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/11.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#"> 12<br/>WARNER</a></h4>
+									<h4><a data-canal="11" data-nombre="WARNER%20CHANEL" onclick="descChannel(this);"> 11<br/>WARNER</a></h4>
 								</div>
 							</li>
 							<li class="list-group-item">
 								<img src="images/canales/12.png" alt="..." class="thumbchanel">
 								<div class="chanelspace">
-									<h4><a href="#">13 <br/>SPACE</a></h4>
+									<h4><a data-canal="12" data-nombre="SPACE" onclick="descChannel(this);">12 <br/>SPACE</a></h4>
 								</div>
 							</li>
 						</ul>
@@ -269,13 +276,14 @@
 			</div><!-- /.row -->
 		</div>  <!-- /Container	 -->
 	</section>
-	<!-- /Body Content -->
-	<section style="margin-top: 0.5em;">
-		<div class="container">
-			<div class="row">
-			</div> <!-- /.row -->
-		</div> <!-- /.container -->
-	</section>
+	<!-- //Modal de Inicio de Session -->
+	<div class="modal fade bs-example-modal-md" id="canalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content ">
+				<!-- contenido aquí -->
+			</div>
+		</div>
+	</div>
 	<footer role="contentinfo" class="ultimo">
 		<div class="container">
 			<!-- / Bloque de cuatro entradas al final-->
@@ -283,28 +291,28 @@
 				<div class="col-md-3 " >
 					<img src="images/icons/a.png" alt="..." class="thumbnotice">
 					<div class="leftspace">
-						<h3><a href="#">Roaming</a></h3>
+						<h3><a href="#">Contáctanos</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi</p>
 					</div>
 				</div>
 				<div class="col-md-3 " >
 					<img src="images/icons/b.png" alt="..." class="thumbnotice">
 					<div class="leftspace">
-						<h3><a href="#">Roaming</a></h3>
+						<h3><a href="#">Atención</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi</p>
 					</div>
 				</div>
 				<div class="col-md-3 " >
 					<img src="images/icons/c.png" alt="..." class="thumbnotice">
 					<div class="leftspace">
-						<h3><a href="#">Roaming</a></h3>
+						<h3><a href="#">Programación</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi</p>
 					</div>
 				</div>
 				<div class="col-md-3 " >
 					<img src="images/icons/d.png" alt="..." class="thumbnotice">
 					<div class="leftspace">
-						<h3><a href="#">Roaming</a></h3>
+						<h3><a href="#">Internet</a></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi</p>
 					</div>
 				</div>

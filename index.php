@@ -13,13 +13,13 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/ayatel.js"></script>
-	
+
 	<!-- /Body -->
 	<section>
 		<header>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-9"><img src="images/logo.png" ></div>
+					<div class="col-md-9"><img src="images/logo1.png" height="100px" width="300px;" ></div>
 					<div class="col-md-3">
 						<ul class="nav barra-inicio  nav-stacked" >
 							<li ><a  class="menu primero"   href="#" ><i class="glyphicon glyphicon-wrench" ></i>Reporte de Avería</a></li>
@@ -28,8 +28,8 @@
 					</div>
 				</div>
 				<!-- /Menu -->
-				<div class="row">
-					<nav class="navbar " role="navigation" >
+				<div class="row " >
+					<nav class="navbar " role="navigation"  style="margin-bottom:0px">
 						<ul class="nav nav-justified admin-menu" >
 							<li class="active" ><a class="menu" href="#" >Inicio</a></li>
 							<li><a class="menu" href="#" >Programacion</a></li>
@@ -41,44 +41,36 @@
 					</nav>
 				</div>
 			</div>
-
 		</header>
 		<div class="container">
-			<div class="row ">				
+			<div class="row ">
 				<div class="col-md-9 ">
 					<!-- Slider -->
 					<div class="row">
-						<div id="carrusel-principal" class="carousel slide wrap " data-ride="carousel">						
+						<div id="carrusel-principal" class="carousel slide wrap " data-ride="carousel">
 							<ol class="carousel-indicators">
 								<li data-target="#carrusel-principal" data-slide-to="0" class="active"></li>
 								<li data-target="#carrusel-principal" data-slide-to="1"></li>
 								<li data-target="#carrusel-principal" data-slide-to="2"></li>
-								<li data-target="#carrusel-principal" data-slide-to="3"></li>
 
-							</ol>						
+							</ol>
 							<div class="carousel-inner">
-								<div class="item active">
-									<img src="images/slider/a.jpg" alt="" >
+								<div  class="item active">
+									<img src="images/slider/a.jpg" alt="">
 									<div class="carousel-caption">
-										Descripcion articulo 1
+										...
 									</div>
 								</div>
 								<div class="item">
-									<img src="images/slider/b.jpg" alt="">
+									<img src="images/slider/b.jpg" alt=""  >
 									<div class="carousel-caption">
-										Descripcion articulo 2
+										...
 									</div>
 								</div>
 								<div class="item">
 									<img src="images/slider/c.jpg" alt=""  >
 									<div class="carousel-caption">
-										Descripcion articulo 3
-									</div>
-								</div>
-								<div class="item">
-									<img src="images/slider/d.jpg" alt=""  >
-									<div class="carousel-caption">
-										Descripcion articulo 3
+										...
 									</div>
 								</div>
 							</div>
@@ -90,42 +82,47 @@
 							</a>
 						</div>
 					</div>
-
 					<!-- /Articulos -->
 					<div class="row shadow2">
 						<div class="col-md-12 shadow" style="height: 1.6em; margin-bottom:1.2em;" >
-
 						</div>
-						<div class="col-md-4">
-							<article class="panel panel-center">
+						<div class="col-md-3">
+							<article class="canal">
 								<header class="panel-heading">FOX </header>
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article1.png" >
 									</div>
-
 								</div>
 							</article>
 						</div>
-						<div class="col-md-4">
-							<article class="panel panel-center">
+						<div class="col-md-3">
+							<article class="canal">
 								<header class="panel-heading">ESPN PLAY</header>
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article2.jpg" >
 									</div>
-
 								</div>
 							</article>
 						</div>
-						<div class="col-md-4">
-							<article class="panel">
+						<div class="col-md-3">
+							<article class="canal">
 								<header class="panel-heading">DISCOVERY</header>
 								<div class="panel-body">
 									<div class="thumbnail">
 										<img src="images/portada/article3.jpg" >
 									</div>
-
+								</div>
+							</article>
+						</div>
+						<div class="col-md-3">
+							<article class="canal">
+								<header class="panel-heading">Nat Geo</header>
+								<div class="panel-body">
+									<div class="thumbnail">
+										<img src="images/portada/article7.jpg" >
+									</div>
 								</div>
 							</article>
 						</div>
@@ -133,11 +130,20 @@
 					<div class="row">
 						<div class="col-md-12 shadow3" style="height: 3em; " >
 							<h2 style="color:white;	font-family: nuevaFuente;margin-top:0.2em ">
-								Noticias Locales.
+								Noticias.
 							</h2>
 						</div>
 					</div>
-					<div class="row">				
+					<div class="row">
+						<div class="col-md-12 " >
+								<ul class="nav nav-tabs nav-justified sub-menu">
+										<li class="active"><a data-page="noti1.php" >Noticias Ayacucho</a></li>
+										<li ><a data-page="noti2.php">Noticias Táchira</a></li>
+										<li ><a data-page="noti3.php">Noticias Venezuela</a></li>
+								</ul>
+						</div>
+					</div>
+					<div class="row contenido-noti">
 						<div class="col-md-4">
 							<article class="panel panel-center principales">
 								<!-- <header class="panel-heading">Articulos</header> -->
@@ -146,8 +152,7 @@
 										<img src="images/portada/article4.jpg" >
 									</div>
 									<p>
-									Enfrentamientos por barricadas y un taxi quemado en San Cristóbal
-
+										Enfrentamientos por barricadas y un taxi quemado en San Cristóbal
 									</p>
 								</div>
 							</article>
@@ -159,8 +164,8 @@
 									<div class="thumbnail">
 										<img src="images/portada/article5.jpg" >
 									</div>
-											<p>
-									Retienen 30.6 Toneladas de Cemento en el táchira por guardias nacionales
+									<p>
+										Retienen 30.6 Toneladas de Cemento en el táchira por guardias nacionales
 									</p>
 								</div>
 							</article>
@@ -173,7 +178,7 @@
 										<img src="images/portada/article6.jpg" >
 									</div>
 									<p>
-									Algunas aerolineas se retiraran de venezuela, debido a la falta de liquidez.
+										Algunas aerolineas se retiraran de venezuela, debido a la falta de liquidez.
 									</p>
 								</div>
 							</article>
@@ -193,14 +198,14 @@
 									<img src="images/atv.png">
 								</div>
 								<p>
-										Transmitiendo en vivo nuestra programación
+									Transmitiendo en vivo nuestra programación
 								</p>
 								<div style="text-align:center;">
-								<span style="text-align:center;"><?php echo  date("d/m/y ");	?></span>
-<button class="btn btn-danger pull-right" >EN VIVO<i class="glyphicon glyphicon-play-circle" ></i></button>			
+									<span style="text-align:center;"><?php echo  date("d/m/y ");	?></span>
+									<button class="btn btn-danger pull-right" >EN VIVO<i class="glyphicon glyphicon-play-circle" ></i></button>
 								</div>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="row  ">
 						<ul class="list-group verticallist visible-md visible-lg ">

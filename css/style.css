@@ -67,7 +67,7 @@ a:hover { cursor: pointer; }
 	top:1em;
 }
 .leftspace {
-	padding-left: 110px;
+	padding-left: 80px;
 	margin-bottom: 40px;
 	position: relative;
 }
@@ -127,15 +127,37 @@ input[type=search]{
 	color:#A02430;
 }
 .admin-menu>li>a{
-	background-color: #ce0c0c;
+	background: #ce0c0c; 
+	background: -moz-linear-gradient(top, #ce0c0c 0% , #7e0808  100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce0c0c), color-stop(100%,#7e0808 )); 
+	background: -webkit-linear-gradient(top, #ce0c0c 0%,#7e0808  100%); 
+	background: -o-linear-gradient(top, #ce0c0c 0%,#7e0808  100%); 
+	background: -ms-linear-gradient(top, #ce0c0c 0%,#7e0808  100%); 
+	background: linear-gradient(to bottom, #ce0c0c 0%,#7e0808  100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce0c0c', endColorstr='#7e0808 ',GradientType=0 ); 	
 	color: white;
 }
 .admin-menu>li>a:hover{
-	background-color: #B65962;
+	background: #ce0c0c; 
+	background: -moz-linear-gradient(top, #7e0808 0% , #ce0c0c  100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce0c0c), color-stop(100%,#7e0808 )); 
+	background: -webkit-linear-gradient(top, #7e0808 0%,#ce0c0c  100%); 
+	background: -o-linear-gradient(top, #7e0808 0%,#ce0c0c  100%); 
+	background: -ms-linear-gradient(top, #7e0808 0%,#ce0c0c 100%); 
+	background: linear-gradient(to bottom, #7e0808 0%,#ce0c0c  100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e0808', endColorstr='#ce0c0c ',GradientType=0 ); 
 	color: white;
 }
 .admin-menu>li.active>a{
-	background-color: #7e0808;
+	background: #ce0c0c; 
+	background: -moz-linear-gradient(top, #7e0808 0% , #ce0c0c  100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce0c0c), color-stop(100%,#7e0808 )); 
+	background: -webkit-linear-gradient(top, #7e0808 0%,#ce0c0c  100%); 
+	background: -o-linear-gradient(top, #7e0808 0%,#ce0c0c  100%); 
+	background: -ms-linear-gradient(top, #7e0808 0%,#ce0c0c 100%); 
+	background: linear-gradient(to bottom, #7e0808 0%,#ce0c0c  100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e0808', endColorstr='#ce0c0c ',GradientType=0 ); 
+	color: white;
 }
 
 a.menu {
@@ -147,6 +169,7 @@ a {
 }
 .admin-menu{
 	font-size: 1.4em;
+	font-weight: bold;
 }
 .derecha{
 	padding-left:4em;
@@ -178,8 +201,47 @@ div.shadow2 header{
 }
 
 .principales p{
-	font-weight: bold;
+	
 	text-align:justify;
+	font-family: nuevaFuente;
+	font-size: 1.3em;
+}
+
+article.canal div.panel-body{
+	padding: 5px 0px 0px 0px;
+}
+.sub-menu{
+margin-top: 1.3em;
+font-size: 1.2em;
+}
+
+
+.sub-menu li>a{
+	padding: 0px;
+}
+.sub-menu li>a{
+	color: #828282;
+	font-weight: bold;
+}
+
+.sub-menu li.active>a{
+	color: #7e0808;
+	font-weight: bold;
+}
+.sub-menu li.active>a:hover{
+	color: #7e0808;
+	font-weight: bold;
+}
+.nav-tabs.nav-justified.sub-menu>li>a {
+border-bottom: 3px solid #ddd;
+border-radius: 4px 4px 0 0;
+}
+.nav-tabs.nav-justified.sub-menu>.active>a {
+border: 2px solid #ddd;
+border-bottom-color: transparent;
+}
+.contenido-noti{
+	margin-top: 1.2em;
 }
 
 .shadow{
@@ -192,28 +254,10 @@ div.shadow2 header{
 	background: -ms-linear-gradient(top, #828282 0%,#030404  100%); 
 	background: linear-gradient(to bottom, #828282 0%,#030404  100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#030404 ',GradientType=0 ); 
-/*	
-	background: #828282; 
-	background: -moz-linear-gradient(top,#030404 10%, #828282 50% , #030404  100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#030404), color-stop(50%,#828282),color-stop(100%,#030404 )); 
-	background: -webkit-linear-gradient(top,#030404  10%, #828282 50%,#030404  100%); 
-	background: -o-linear-gradient(top,#030404  10%, #828282 50%,#030404  100%); 
-	background: -ms-linear-gradient(top,#030404  10%, #828282 50%,#030404  100%); 
-	background: linear-gradient(to bottom,#030404  10%, #828282 50%,#030404  100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#030404 ',GradientType=0 ); 
-	*/
+
 }
 .shadow2{
-/*	
-	background: #030404;
-	background: -moz-linear-gradient(top, #030404 0% , #828282  100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#828282), color-stop(100%,#030404 )); 
-	background: -webkit-linear-gradient(top, #030404 0%,#828282  100%);
-	background: -o-linear-gradient(top, #030404 0%,#828282  100%); 
-	background: -ms-linear-gradient(top, #030404 0%,#828282  100%); 
-	background: linear-gradient(to bottom, #030404 0%,#828282  100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030404', endColorstr='#828282 ',GradientType=0 ); 
-	*/
+margin-top: -5px;
 	background: #828282; 
 	background: -moz-linear-gradient(top, #828282 0% , #030404  100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#828282), color-stop(100%,#030404 )); 
@@ -227,15 +271,6 @@ div.shadow2 header{
 
 .shadow3{
 
-/*	background: #828282; 
-	background: -moz-linear-gradient(top, #828282 0% , #030404  100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#828282), color-stop(100%,#030404 )); 
-	background: -webkit-linear-gradient(top, #828282 0%,#030404  100%); 
-	background: -o-linear-gradient(top, #828282 0%,#030404  100%); 
-	background: -ms-linear-gradient(top, #828282 0%,#030404  100%); 
-	background: linear-gradient(to bottom, #828282 0%,#030404  100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#030404 ',GradientType=0 ); 
-	*/
 	background: #ce0c0c; 
 	background: -moz-linear-gradient(top, #ce0c0c 0% , #7e0808  100%); 
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce0c0c), color-stop(100%,#7e0808 )); 
@@ -246,8 +281,18 @@ div.shadow2 header{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce0c0c', endColorstr='#7e0808 ',GradientType=0 ); 
 	
 }
+#carrusel-principal{
+	margin-top:-1px;	
+}
 
-@media (max-width: 419px) {
+
+@media (max-width: 323px) {
+	#carrusel-principal div.carousel-inner{
+		height: 100px;		
+		overflow: hidden;
+	}
+}
+@media (min-width: 324px) and (max-width: 419px) {
 	#carrusel-principal div.carousel-inner{
 		height: 200px;		
 		overflow: hidden;
@@ -286,7 +331,7 @@ div.shadow2 header{
 		height: 300px;		overflow: hidden;
 	}
 	.verticallist{
-		height: 430px;
+		height: 360px;
 	}
 
 }
@@ -297,7 +342,7 @@ div.shadow2 header{
 		overflow: hidden;
 	}
 	.verticallist{
-		height: 550px;
+		height: 475px;
 	}
 }
 

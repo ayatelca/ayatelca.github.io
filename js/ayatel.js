@@ -7,6 +7,16 @@ $(function() {
 		$(this).closest('li').addClass('active');
 	});
 
+	$('.sub-menu li > a').click(function(e)
+	{
+		e.preventDefault();
+		$('.sub-menu li').removeClass('active');
+		$(this).closest('li').addClass('active');
+		var page=$(this).data("page");
+		$(".contenido-noti").load(page, function() { 
+			$(".contenido-noti").show();
+		});
+	});
 });
 
 function descChannel(anchor){

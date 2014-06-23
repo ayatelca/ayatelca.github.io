@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='Televisora Ayacucho' name='description' />
+    <meta content='Ayacucho TV Television Ayatelca Ayatel' name='keywords' />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Ayatecucho Televisión</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+    <script type="text/javascript" src="js/resize.js"></script>
+    <script type="text/javascript" src="js/tvguide.js"></script>
+    <script type="text/javascript" src="js/ayatel.js"></script>
+    <script type="text/javascript" src="js/noticias.js"></script>
+
+    <!-- /Body -->
+    <section>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <img src="images/logo1.png" height="100px" width="300px;">
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="nav barra-inicio nav-stacked">
+                            <li><a class="menu primero" href="#"><i class="glyphicon glyphicon-wrench"></i>Reporte de Avería</a>
+                            </li>
+                            <li><a class="menu" href="#"><i class="glyphicon glyphicon-user"></i>Consulte su Cuenta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Menu -->
+                <div class="row ">
+                    <nav class="navbar " role="navigation" style="margin-bottom:0px">
+                        <ul class="nav nav-justified admin-menu">
+                            <li class="active"><a data-item="index" class="menu" href="#">Inicio</a>
+                            </li>
+                            <li><a class="menu" href="#">Nosotros</a>
+                            </li>
+                            <li><a class="menu" href="#">Canales</a>
+                            </li>
+                            <li><a data-item="noticias" class="menu" href="#">Notícias</a>
+                            </li>
+                            <li><a class="menu" href="#">Contáctanos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-9 ">
+                    <!-- Slider -->
+           
+                    <!-- /Articulos -->
+                    
+                </div>
+                <div class="col-md-3 derecha">
+                    <!-- Streaming BOx -->
+                    <div class="row">
+                        <article class="panel panel-center">
+                            <header class="panel-heading">
+                                <h3>Ayacucho Televisión</h3>
+                            </header>
+                            <div class="panel-body">
+                                <div class="thumbnail">
+                                    <img src="images/atv.png">
+                                </div>
+                                <p>
+                                    Transmitiendo en vivo nuestra programación
+                                </p>
+                                <div style="text-align:center;">
+                                    <span id="today" style="text-align:center;">
+                                    </span>
+                                    <button class="btn btn-danger pull-right">EN VIVO<i class="glyphicon glyphicon-play-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row ">
+                        <ul id="canales" class="list-group verticallist visible-md visible-lg ">
+                        </ul>
+                    </div>
+                </div>
+                <!-- /col-3     -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /Container     -->
+    </section>
+    <!-- //Modal de Inicio de Session -->
+    <div class="modal fade bs-example-modal-md" id="canalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <img src="" alt="..." width="64" height="32" class="thumbchanel">
+                    <h3 class="modal-title canales">
+                        <span id='ct'>CANAL</span>
+                        <img style="margin-right:0.8em;margin-top:-0.3em;" src="images/atv.png" alt="..." class=" pull-right" height="50px" width="50px">
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <h4 style="display:inline">Programas pendientes</h4>
+                    <select id="wday" data-dtv="" style="text-align:center;padding-left:1em;margin-left:1em; margin-bottom:1em;">
+                        <option value="0">Hoy</option>
+                        <option value="1">Mañana</option>
+                    </select>
+                    <table class="table scroll" id="table">
+                        <thead>
+                            <tr>
+                                <th class="hora">Hora</th>
+                                <th>Título</th>
+                            </tr>
+                        </thead>
+                        <tbody id="programacion">
+                            <tr>
+                                <td>
+                                    09:00am
+                                </td>
+                                <td>
+                                    Noticias de Venezuela
+                                </td>
+                                <td>
+                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    11:30am
+                                </td>
+                                <td>
+                                    Entrevista con el pueblo.
+                                </td>
+                                <td>
+                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    01:30am
+                                </td>
+                                <td>
+                                    Noti tarde.
+                                </td>
+                                <td>
+                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer role="contentinfo" class="ultimo">
+        <div class="container">
+            <!-- / Bloque de cuatro entradas al final-->
+            <div class="row enlace" style="padding-left:1em;">
+                <div class="col-md-3 ">
+                    <img src="images/icons/a.png" alt="..." class="thumbnotice">
+                    <div class="leftspace">
+                        <h3><a href="#">Contáctanos</a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <img src="images/icons/b.png" alt="..." class="thumbnotice">
+                    <div class="leftspace">
+                        <h3><a href="#">Atención</a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <img src="images/icons/c.png" alt="..." class="thumbnotice">
+                    <div class="leftspace">
+                        <h3><a href="#">Programación</a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <img src="images/icons/d.png" alt="..." class="thumbnotice">
+                    <div class="leftspace">
+                        <h3><a href="#">Internet</a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, mi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /link de redes sociales -->
+        <div class="row social">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <p>
+                    Visita nuestras redes sociales.
+                </p>
+                <hr>
+                <ul class="list-inline center-block" style="text-align:center;">
+                    <li>
+                        <a href="http://facebook.com/#" target="_blank">
+                            <img src="images/social/soc_fb.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/#" target="_blank">
+                            <img src="images/social/soc_tw.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://google.com/#" target="_blank">
+                            <img src="images/social/soc_gplus.png">
+                        </a>
+                    </li>
+                    <!-- <li><a href="http://pinterest.com/#" target="_blank"><img src="images/social/soc_pin.png"></a></li> -->
+                </ul>
+                <div>
+                    <p class="center-block empresa">
+                        <a href="#"> © ParaWebs - Soluciones Informáticas.</a>
+                    </p>
+                </div>
+            </div>
+            <!--/col-->
+        </div>
+        </div>
+        <!--/container-->
+        <ul class="nav pull-right scroll-top">
+            <li><a href="#" title="Subir"><i class="glyphicon glyphicon-chevron-up"></i></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

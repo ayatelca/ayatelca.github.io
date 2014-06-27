@@ -89,7 +89,7 @@ $(function() {
             $("#noticias").hide();
             $('#home').fadeIn();
             $('#post').hide();
-            history.pushState(null, null, "/ayatel/"); 
+            history.pushState(null, null, "/"); 
 
         }
         else if($(this).data("item") == "contacto") {

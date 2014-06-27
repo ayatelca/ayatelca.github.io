@@ -37,7 +37,12 @@ $(function() {
             $('#noticias').html("")
             $.each(data, function(key, val) {
                 //console.log(val);
-                img = val.featured_image.attachment_meta.sizes.medium.url;
+                try {
+                    img = val.featured_image.attachment_meta.sizes.medium.url;
+                }
+                catch(err) {
+                    img = "";
+                }                
                 var html = [
                     '<div class="col-md-4">',
                     '<article class="panel panel-center principales">',

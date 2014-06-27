@@ -1,4 +1,4 @@
-var news_api = "http://127.0.0.1:8080/noticias/wp-json/"
+var news_api = "http://api.ayatelca.com/wp-json/"
 
 
 $(document).ready(function() {
@@ -85,6 +85,11 @@ $(function() {
             $('#home').fadeIn();
             $('#post').hide();
             history.pushState(null, null, "/ayatel/"); 
+
+        }
+        else if($(this).data("item") == "contacto") {
+           $('#conmodal').modal('toggle')
+            history.pushState(null, null, "#/contacto"); 
 
         }
         $('.admin-menu li').removeClass('active');

@@ -1,4 +1,4 @@
-var tvguideapi = "http://127.0.0.1:8080/tvguide/"
+var tvguideapi = "http://tvguide.gopagoda.com/"
 $(document).ready(function() {
     $.getJSON(tvguideapi + "index.php/canales", function(data) {
         var items = [];

@@ -19,6 +19,13 @@ Path.map("#/nosotros").to(function() {
     });
 });
 
+Path.map("#/contacto").to(function() {
+   
+    $(document).ready(function() {
+        $('#conmodal').modal('show')
+    });
+});
+
 
 
 Path.listen();

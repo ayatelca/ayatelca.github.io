@@ -129,13 +129,13 @@ function nosotros() {
 
 function programacion() {
     $.getJSON(tvguideapi + "index.php/canales", function(data) {
-        var items = [];
+        //var items = [];
         $.each(data, function(key, val) {            
             html = '<div class="items"><p class="text-center"><img src="'+tvguideapi+val.img+'" alt="'+val.nombre+'" height="50" width="80"></p><p class="text-center">'+val.nombre+'</p><p class="text-center"><strong>'+val.numero+'</strong></p></div>';
-            items.push(html);
-           //$(".wrapper").hide().append(html).fadeIn('slow');  
+            //items.push(html);
+           $(".wrapp").hide().append(html).fadeIn('slow');  
         });        
-        $(".wrapper").hide().append(items.join("")).fadeIn('slow');        
+        //$(".wrapp").hide().append(items.join("")).fadeIn('slow');        
     })
         .always(function() {});
 

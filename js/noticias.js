@@ -131,7 +131,7 @@ function programacion() {
     $.getJSON("canales.json", function(data) {
         var items = [];
         $.each(data, function(key, val) {            
-            html = '<div class="item"><p class="text-center"><img src="'+tvguideapi+val.img+'" alt="'+val.nombre+'" height="50" width="80"></p><p class="text-center">'+val.nombre+'</p><p class="text-center"><strong>'+val.numero+'</strong></p></div>';
+            html = '<div class="items"><p class="text-center"><img src="'+tvguideapi+val.img+'" alt="'+val.nombre+'" height="50" width="80"></p><p class="text-center">'+val.nombre+'</p><p class="text-center"><strong>'+val.numero+'</strong></p></div>';
             //items.push(html);
             $(".wrapper").hide().append(html).fadeIn('slow');  
         });

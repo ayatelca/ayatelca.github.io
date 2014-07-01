@@ -707,12 +707,12 @@ tbody {
     background: #cccccc;
   }
 
-.wrapper{
+.wrapp{
     overflow:hidden; /*make sure the wrapper has no dimension*/
     margin-bottom:15px;
 }
 
-.item{
+.items{
     font-size: 12px;
     float:left; 
     width:100px;

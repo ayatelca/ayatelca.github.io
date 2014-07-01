@@ -130,15 +130,14 @@ function nosotros() {
 function programacion() {
     $.getJSON("canales.json", function(data) {
         var items = [];
-        $.each(data, function(key, val) {
-
-            console.log(val);
+        $.each(data, function(key, val) {            
             html = '<div class="item"><p class="text-center"><img src="'+tvguideapi+val.img+'" alt="'+val.nombre+'" height="50" width="80"></p><p class="text-center">'+val.nombre+'</p><p class="text-center"><strong>'+val.numero+'</strong></p></div>';
-            items.push(html);
+            //items.push(html);
+            $(".wrapper").hide().append(html).fadeIn('slow');  
         });
 
         // $("#postitle").html("<h1>" + data.title + "</h1>");
-        $(".wrapper").hide().html(items.join("")).fadeIn('slow');        
+        //$(".wrapper").hide().append(items.join("")).fadeIn('slow');        
     })
         .always(function() {});
 

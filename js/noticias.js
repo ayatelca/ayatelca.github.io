@@ -128,7 +128,7 @@ function nosotros() {
 }
 
 function programacion() {
-    $.getJSON("canales.json", function(data) {
+    $.getJSON(tvguideapi + "index.php/canales", function(data) {
         var items = [];
         $.each(data, function(key, val) {            
             html = '<div class="items"><p class="text-center"><img src="'+tvguideapi+val.img+'" alt="'+val.nombre+'" height="50" width="80"></p><p class="text-center">'+val.nombre+'</p><p class="text-center"><strong>'+val.numero+'</strong></p></div>';

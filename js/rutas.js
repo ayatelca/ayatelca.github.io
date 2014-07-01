@@ -5,6 +5,7 @@ Path.map("#/post/:id/:name").to(function() {
     $(document).ready(function() {
     	$("html, body").animate({ scrollTop: 0 }, "slow");
         $('#home').show().hide();
+        $('#channel').hide();
         $('#post').fadeIn();
     });
 });
@@ -15,7 +16,9 @@ Path.map("#/nosotros").to(function() {
     $(document).ready(function() {
     	$("html, body").animate({ scrollTop: 0 }, "slow");
         $('#home').show().hide();
+        $('#channel').hide();
         $('#post').hide().fadeIn();
+
     });
 });
 

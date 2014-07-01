@@ -77,6 +77,7 @@ $(function() {
             $("#noticias").fadeIn("slow");
             $("#spinnews").fadeIn("show");
             $('#post').hide();
+            $('#channel').hide();
             $('#home').fadeIn();
             noticias('posts?ayacucho&filter[posts_per_page]=5');
             //location.href = "#newstitle";
@@ -88,6 +89,7 @@ $(function() {
             $("#inews").show();
             $("#noticias").hide();
             $('#home').fadeIn();
+            $('#channel').hide();
             $('#post').hide();
             history.pushState(null, null, "/");
 

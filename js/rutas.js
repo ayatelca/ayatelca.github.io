@@ -26,6 +26,15 @@ Path.map("#/contacto").to(function() {
     });
 });
 
+Path.map("#/canales").to(function() {
+    programacion();
+    $(document).ready(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $('#home').show().hide();
+        $('#post').show().hide();
+        $('#channel').hide().fadeIn();
+    });
+});
 
 
 Path.listen();

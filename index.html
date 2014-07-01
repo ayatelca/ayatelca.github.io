@@ -8,7 +8,7 @@
     <meta content='Ayacucho TV Television Ayatelca Ayatel' name='keywords' />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>Ayatecucho Televisión</title>
+    <title>Ayacucho Televisión</title>
 </head>
 
 <body>
@@ -16,8 +16,16 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/momentjs/moment.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
-    <script type="text/javascript" src="js/app.min.js"></script>
 
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <!-- Body 
+    
+    
+    <script type="text/javascript" src="js/ayatel.js"></script>
+    <script type="text/javascript" src="js/tvguide.js"></script>
+    <script type="text/javascript" src="js/noticias.js"></script>
+    <script type="text/javascript" src="js/rutas.js"></script>
+-->
     <!-- /Body -->
     <section>
         <header>
@@ -43,7 +51,7 @@
                             </li>
                             <li><a class="menu" href="#/nosotros">Nosotros</a>
                             </li>
-                            <li><a class="menu" href="#">Canales</a>
+                            <li><a class="menu" href="#/canales">Canales</a>
                             </li>
                             <li><a data-item="noticias" class="menu" href="#">Notícias</a>
                             </li>
@@ -57,6 +65,25 @@
         <div class="container">
             <div class="row ">
                 <div class="col-md-9 ">
+                  <div id="channel" style="display: none;">
+                                 <article>
+                    <div class="row">
+                         <div class="col-md-10 ">
+                           <header><h1>CANALES</h1></header>                           
+                            <div class="wrapper">
+                                                     
+                            </div>
+                                                     
+                        </div>
+
+                         <div class="col-md-2 publici visible-md visible-lg">
+ 
+                         </div>
+
+                    </div>
+                    </article>
+                    </div>
+
                     <div id="post" style="display: none;">
                                  <article>
                     <div class="row noticiav">
@@ -166,7 +193,7 @@
                         </div>
                         <div id="spinnews" class="text-center" style="display: none;">
                             <img src="images/ajax-loader.gif" width="220" height="19">
-                        </div>
+                        </div>                      
                         <div id="noticias" style="display: none;">
 
                         </div>

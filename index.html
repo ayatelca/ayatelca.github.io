@@ -13,6 +13,7 @@
 
 <body>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/momentjs/moment.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
@@ -25,6 +26,8 @@
     <script type="text/javascript" src="js/tvguide.js"></script>
     <script type="text/javascript" src="js/noticias.js"></script>
     <script type="text/javascript" src="js/rutas.js"></script>
+    <script type="text/javascript" src="js/livestream.js"></script>
+    <script type="text/javascript" src="js/cuenta.js"></script>
 
     <!-- /Body -->
     <section>
@@ -38,7 +41,7 @@
                         <ul class="nav barra-inicio nav-stacked">
                             <li><a class="menu primero" href="#"><i class="glyphicon glyphicon-wrench"></i>Reporte de Avería</a>
                             </li>
-                            <li><a class="menu" href="#"><i class="glyphicon glyphicon-user"></i>Consulte su Cuenta</a>
+                            <li><a  data-toggle="modal" data-target="#maccount" class="menu" href="#"><i class="glyphicon glyphicon-user"></i>Consulte su Cuenta</a>
                             </li>
                         </ul>
                     </div>
@@ -65,42 +68,44 @@
         <div class="container">
             <div class="row ">
                 <div class="col-md-9 ">
-                  <div id="channel" style="display: none;">
-                                 <article>
-                    <div class="row">
-                         <div class="col-md-10 ">
-                           <header><h1>CANALES</h1></header>                           
-                            <div class="wrapp">
-                                                     
+                    <div id="channel" style="display: none;">
+                        <article>
+                            <div class="row">
+                                <div class="col-md-10 ">
+                                    <header>
+                                        <h1>CANALES</h1>
+                                    </header>
+                                    <div class="wrapp">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2 publici visible-md visible-lg">
+
+                                </div>
+
                             </div>
-                                                     
-                        </div>
-
-                         <div class="col-md-2 publici visible-md visible-lg">
- 
-                         </div>
-
-                    </div>
-                    </article>
+                        </article>
                     </div>
 
                     <div id="post" style="display: none;">
-                                 <article>
-                    <div class="row noticiav">
-                         <div class="col-md-10 ">
-                           <header id="postitle"></header>
-                           
-                           <div id="postext">                           
-                           </div>
-                      
-                         </div>
+                        <article>
+                            <div class="row noticiav">
+                                <div class="col-md-10 ">
+                                    <header id="postitle"></header>
 
-                         <div class="col-md-2 publici visible-md visible-lg">
- 
-                         </div>
+                                    <div id="postext">
+                                    </div>
 
-                    </div>
-                    </article>
+                                </div>
+
+                                <div class="col-md-2 publici visible-md visible-lg">
+
+                                </div>
+
+                            </div>
+                        </article>
                     </div>
 
                     <div id="home">
@@ -193,7 +198,7 @@
                         </div>
                         <div id="spinnews" class="text-center" style="display: none;">
                             <img src="images/ajax-loader.gif" width="220" height="19">
-                        </div>                      
+                        </div>
                         <div id="noticias" style="display: none;">
 
                         </div>
@@ -272,7 +277,7 @@
                                 <div style="text-align:center;">
                                     <span id="today" style="text-align:center;">
                                     </span>
-                                    <button class="btn btn-danger pull-right">EN VIVO<i class="glyphicon glyphicon-play-circle"></i>
+                                    <button id="streaming" data-toggle="modal" data-target="#stream" class="btn btn-danger pull-right">EN VIVO<i class="glyphicon glyphicon-play-circle"></i>
                                     </button>
                                 </div>
                             </div>
@@ -314,40 +319,7 @@
                                 <th>Título</th>
                             </tr>
                         </thead>
-                        <tbody id="programacion">
-                            <tr>
-                                <td>
-                                    09:00am
-                                </td>
-                                <td>
-                                    Noticias de Venezuela
-                                </td>
-                                <td>
-                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    11:30am
-                                </td>
-                                <td>
-                                    Entrevista con el pueblo.
-                                </td>
-                                <td>
-                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    01:30am
-                                </td>
-                                <td>
-                                    Noti tarde.
-                                </td>
-                                <td>
-                                    <a class="btn btn-default"><i class="glyphicon glyphicon-phone"></i>Recordar </a>
-                                </td>
-                            </tr>
+                        <tbody id="programacion">                           
                         </tbody>
                     </table>
                 </div>
@@ -440,22 +412,117 @@
             </li>
         </ul>
     </footer>
-<div class="modal fade" id="conmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <script type="text/javascript">
+        params = {
+            AllowScriptAccess: 'always'
+        };
+
+        function livestreamPlayerCallback(event) {
+            console.log(event);
+            if (event == 'ready') {
+                player = document.getElementById("livestreamPlayer");
+                player.setDevKey('lyEHju0oayUhL0j1K-_1s0ADRDqnEjWlz4qesfC8kQbjuL7X0Zufdt68bIAchyWx8U5li_FP6g2KpYOrU6Xzk_USpZMWHX5E1LYNX1CnlJo');
+                player.load('ayatelca');
+            }
+            
+        }
+        swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v21/playerapi.swf",
+            "livestreamPlayer", "400", "300", "9.0.0", "expressInstall.swf", null, params);
+    </script>
+    <!-- Streaming Modal -->
+    <div class="modal fade" id="stream" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Ayacucho Television - EN VIVO!</h4>
+          </div>
+          <div class="modal-body">
+               <br>
+                <div id="livestreamPlayer" class="text-center">
+                    <h1>This page requires flash</h1>
+                    <p><a href="http://www.adobe.com/go/getflashplayer">download flash</a>
+                    </p>
+                </div>
+                <br/>
+                <input type="button" value="play" onclick="player.startPlayback()" />
+                <input type="button" value="pause" onclick="player.stopPlayback()" />
+                <input type="button" value="vol +" onclick="player.volumeUp()" />
+                <input type="button" value="vol -" onclick="player.volumeDown()" />
+  
+                <br>
+          </div>      
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="conmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Contacto</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="maccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Contacto</h4>
+        <h4 class="modal-title text-center" id="myModalLabel">Consultar Cuenta</h4>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="panel panel-default" id="consuldata"  style="display: none;">
+          <div class="panel-heading">
+            <h3 id="clientname" class="panel-title"></h3>
+          </div>
+          <div class="panel-body">
+           <div id="mesespay" class="list-group">         
+            </div>
+          </div>
+        </div>
+      <div class="panel panel-default" id="consulog">      
+      <div class="panel-body">
+      <div class="alert alert-warning alert-dismissible" role="alert" id="alertadatos" style="display: none;">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">X</span></button>
+      <strong>Alerta!</strong> Debe introducir el numero de contrato y cedula.
+    </div>
+      <div class="text-center">
+           <form class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail2">Contrato</label>
+            <input type="text" required class="form-control" id="contrato_n" placeholder="Contrato">
+          </div>          
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword2">Cedula</label>
+            <input type="text" class="form-control" id="cedula" placeholder="Cedula">
+          </div>          
+          <button type="button" id="checkaccount" class="btn btn-default">Consultar</button>
+        </form>
+      </div>     
       </div>
+    </div> 
+
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
        </div>
     </div>
   </div>
 </div>
+        
+
+
 </body>
 
 </html>

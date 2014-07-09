@@ -2,9 +2,8 @@ $(document).ready(function() {
     $("#checkaccount").click(function() {
         count = document.getElementById("contrato_n").value.length
         if( count > 0) {
-
-
-            $.getJSON("http://127.0.0.1:8080/ayatelcuenta/index.php/contrato/" + $("#contrato_n").val() + "/cedula/85555")
+            $("#loadata").fadeIn();            
+            $.getJSON("http://api.ayatelca.com/cuenta/index.php/contrato/" + $("#contrato_n").val() + "/cedula/85555")
                 .done(function(json) {
                     var items = [];
                     $("#clientname").html(json[0].nombres + " " + json[0].apellidos)

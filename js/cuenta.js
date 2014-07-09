@@ -5,9 +5,8 @@ $(document).ready(function() {
             $("#loadata").fadeIn();
             $.getJSON("http://api.ayatelca.com/cuenta/index.php/contrato/" + $("#contrato_n").val() + "/cedula/85555")
                 .done(function(json) {
-                    var items = [];
-                    try {
-
+                    var items = [];                    
+                    if (json.length != 0) {
                         $("#clientname").html(json[0].nombres + " " + json[0].apellidos)
                         $("#consulog").hide();
                         $("#consuldata").fadeIn();
@@ -55,10 +54,14 @@ $(document).ready(function() {
 
                         }
 
-                    } catch (err) {
-                          items.push('<a href="#"class="list-group-item">Cliente no encontrado.</a>');
+                    } else {
+                          items.push('<a href="#"class="list-group-item">Cliente no encontrado.</a>'); 
+                          console.log("ke?"); 
+                          $("#loadata").hide();
+                          $("#notfound").show();                       
                     }
-                    //console.log(json[0].nombres);
+                    
+
                     $("#mesespay").html(items.join(""));
                 })
                 .fail(function(jqxhr, textStatus, error) {

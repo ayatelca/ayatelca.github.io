@@ -412,23 +412,7 @@
             </li>
         </ul>
     </footer>
-    <script type="text/javascript">
-        params = {
-            AllowScriptAccess: 'always'
-        };
-
-        function livestreamPlayerCallback(event) {
-            console.log(event);
-            if (event == 'ready') {
-                player = document.getElementById("livestreamPlayer");
-                player.setDevKey('lyEHju0oayUhL0j1K-_1s0ADRDqnEjWlz4qesfC8kQbjuL7X0Zufdt68bIAchyWx8U5li_FP6g2KpYOrU6Xzk_USpZMWHX5E1LYNX1CnlJo');
-                player.load('ayatelca');
-            }
-            
-        }
-        swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v21/playerapi.swf",
-            "livestreamPlayer", "400", "300", "9.0.0", "expressInstall.swf", null, params);
-    </script>
+    
     <!-- Streaming Modal -->
     <div class="modal fade" id="stream" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -439,11 +423,7 @@
           </div>
           <div class="modal-body">
                <br>
-                <div id="livestreamPlayer" class="text-center">
-                    <h1>This page requires flash</h1>
-                    <p><a href="http://www.adobe.com/go/getflashplayer">download flash</a>
-                    </p>
-                </div>
+                <iframe width="426" height="240" src="//www.youtube.com/embed/9P89Px8gAeI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                 <br/>
                 <input type="button" value="play" onclick="player.startPlayback()" />
                 <input type="button" value="pause" onclick="player.stopPlayback()" />
